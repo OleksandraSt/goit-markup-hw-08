@@ -1,0 +1,35 @@
+.socials-list {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 206px;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $primary-background-color;
+    color: $primary-icons-color;
+
+    transition: background-color $time-period $timing-function, color $time-period $timing-function;
+
+    .footer & {
+        background-color: $footer-icons-background-color;
+        color: $primary-text-darkbackground-color;
+        }
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $primary-text-darkbackground-color;
+    }
+}
+
+.social-icon {
+    fill: currentColor;
+}

@@ -1,0 +1,36 @@
+.job-section {
+    background-color: $primary-background-color;
+    padding-bottom: 94px;
+}
+
+.job-list {
+    display: flex;
+}
+
+.job-image {
+    position: relative;
+
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.job-descr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-text-darkbackground-color;
+    background-color: $overlay-job-image-color;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    }

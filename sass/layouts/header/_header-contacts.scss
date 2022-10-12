@@ -1,0 +1,27 @@
+.header-list {
+    @extend %header-list;
+}
+
+.header-email {
+    margin-right: 50px;
+}
+
+.header-contact {
+    color: $primary-text-color;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color $time-period $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.link-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

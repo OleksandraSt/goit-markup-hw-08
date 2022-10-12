@@ -1,0 +1,35 @@
+
+@import "./utils/vars";
+@import "./base/defaults";
+@import "./base/common";
+@import "./utils/placeholders";
+
+@import "./components/button";
+@import "./components/socials-list";
+@import "./components/logo";
+
+@import "./layouts/header/header-common";
+@import "./layouts/header/site-nav";
+@import "./layouts/header/header-contacts";
+
+@import "./layouts/hero/hero";
+
+@import "./layouts/features/features";
+
+@import "./layouts/job/job";
+
+@import "./layouts/team/team";
+
+@import "./layouts/clients/clients";
+
+@import "./layouts/footer/footer-common";
+@import "./layouts/footer/company-info";
+@import "./layouts/footer/socials";
+@import "./layouts/footer/footer-form";
+
+@import "./layouts/modal/backdrop";
+@import "./layouts/modal/modal";
+
+@import "./layouts/page-portfolio/portfolio-common";
+@import "./layouts/page-portfolio/filtr-list";
+@import "./layouts/page-portfolio/project-list";

@@ -1,0 +1,41 @@
+.company-info {
+    margin-right: 70px;
+}
+
+.adress-item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer-address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-darkbackground-color;
+
+    transition: color $time-period $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.footer-contact {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-text-darkbackground-color;
+
+    transition: color $time-period $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

@@ -1,0 +1,19 @@
+.logo-header {
+    @extend %logo;
+
+    color: $dark-logo-color;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo-footer {
+    @extend %logo;
+
+    color: $primary-text-darkbackground-color;
+    margin-bottom: 20px;
+}
+
+.logo-accent {
+    color: $accent-color;
+}

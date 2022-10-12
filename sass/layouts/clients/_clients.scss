@@ -1,0 +1,35 @@
+.clients-list {
+    display: flex;
+}
+
+.clients-list__item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.clients-list__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $primary-icons-color;
+    border-radius: 4px;
+    background-color: $primary-background-color;
+    color: $primary-icons-color;
+
+    transition: color $time-period $timing-function, border-color $time-period $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+.clients-list__icon {
+    fill: currentColor;
+}
