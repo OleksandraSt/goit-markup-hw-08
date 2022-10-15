@@ -1,6 +1,10 @@
 .job-section {
     background-color: $primary-background-color;
     padding-bottom: 94px;
+
+    @media screen and (max-width: ($desktop - 1px)) {
+        display: none;
+    }
 }
 
 .job-list {
@@ -9,7 +13,7 @@
 
 .job-image {
     position: relative;
-
+    
     margin-right: 30px;
 
     &:last-child {

@@ -1,5 +1,6 @@
 .clients-list {
     display: flex;
+
 }
 
 .clients-list__item {
@@ -8,6 +9,11 @@
     &:last-child {
         margin-right: 0;
     }
+
+    // @media screen and (min-width: $mobile) {
+    //     flex-wrap: wrap;
+    //     margin-bottom: 30px;
+    //    }
 }
 
 .clients-list__link {

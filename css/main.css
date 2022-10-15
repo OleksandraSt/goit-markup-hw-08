@@ -46,25 +46,53 @@ button {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .link {
@@ -341,40 +369,60 @@ button {
   background-color: #FFFFFF;
 }
 
-.features-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -30px;
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-.features-list__item {
-  margin-right: 30px;
-  -ms-flex-preferred-size: 270px;
-      flex-basis: 270px;
+.features-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
-.features-list__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    -ms-flex-preferred-size: 354px;
+        flex-basis: 354px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .features-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    -ms-flex-preferred-size: 270px;
+        flex-basis: 270px;
+  }
 }
 
 .features-list__image {
   background-color: #F5F4FA;
+  text-align: center;
   padding-top: 25px;
-  padding-right: 100px;
   padding-bottom: 25px;
-  padding-left: 100px;
   margin-bottom: 30px;
 }
 
 .features-list__title {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .features-list__title {
+    text-align: start;
+  }
 }
 
 .features-list__description {
@@ -386,6 +434,11 @@ button {
 .job-section {
   background-color: #FFFFFF;
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .job-section {
+    display: none;
+  }
 }
 
 .job-list {
@@ -423,31 +476,69 @@ button {
   background-color: #F5F4FA;
 }
 
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -30px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .team-card {
   background-color: #FFFFFF;
-  margin-right: 30px;
-  -ms-flex-preferred-size: 270px;
-      flex-basis: 270px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.team-card:last-child {
-  margin-right: 0;
+.team-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .team-card {
+    -ms-flex-preferred-size: 354px;
+        flex-basis: 354px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .team-card:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-card {
+    -ms-flex-preferred-size: 270px;
+        flex-basis: 270px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .worker-photo {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .worker-photo {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .worker-photo {
+    width: 270px;
+  }
 }
 
 .team-info {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team-info {
+    padding-bottom: 30px;
+  }
 }
 
 .team-member {
