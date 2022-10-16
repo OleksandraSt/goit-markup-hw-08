@@ -1,12 +1,28 @@
 .company-info {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        width: 231px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 0;
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
 }
 
 .adress-item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
     }
 }
 

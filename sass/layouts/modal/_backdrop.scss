@@ -7,7 +7,9 @@
     background-color: $backdrop-background-color;
 
     opacity: 1;
-    transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
+    transition: opacity $time-period $timing-function, visibility $time-period $timing-function;
+
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden{

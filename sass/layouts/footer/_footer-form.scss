@@ -1,6 +1,12 @@
 .footer-form{
-    margin-right: 0;
-    margin-left: auto;
+    @media screen and (min-width: $tablet) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 0;
+    }
 }
 
 .subscribe-title {
@@ -8,31 +14,44 @@
 }
 
 .subscribe-form{
-    display: flex;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
     }
 
 .subscribe-input {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 16px;
-        padding-right: 0;
-        width: 358px;
-        border: 1px solid $footer-input-border-color;
-        filter: drop-shadow(0px 4px 4px $footer-input-shadow-color);
-        border-radius: 4px;
-        background-color: $darkbackground-color;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-        color: $secondary-text-darkbackground-color;
-        margin-right: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 0;
+    border: 1px solid $footer-input-border-color;
+    box-shadow: $footer-input-shadow-color;
+    border-radius: 4px;
+    background-color: $darkbackground-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $secondary-text-darkbackground-color;
     
-        transition: border-color 250ms var(--timing-function);
+        transition: border-color $time-period $timing-function;
 
         &:hover,
         &:focus {
             border-color: $primary-text-darkbackground-color;
+        }
+
+        @media screen and (min-width: $mobile) {
+            width: 450px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 358px;
+            margin-right: 12px;
+            margin-bottom: 0;
         }
     }
 
