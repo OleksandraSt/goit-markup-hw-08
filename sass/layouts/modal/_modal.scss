@@ -5,8 +5,8 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    width: 450px;
-    height: 609px;
+    width: 100%;
+    height: auto;
     background-color: $primary-background-color;
     border-radius: 4px;
     box-shadow: $modal-shadow-color;
@@ -16,6 +16,11 @@
 
     .backdrop.is-hidden &{
         transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+        height: 609px;
     }
 
     @media screen and (min-width: $desktop) {
