@@ -15,21 +15,68 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
+                <a href="./index.html" class="link logo-header"><span lang="en"><span class="logo-accent">Web</span>Studio</span></a>
+                <button type="button"
+                class="menu-button is-open"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button>
+                    <svg width="24px" height="16px" aria-label="Перемикач мобільного меню">
+                        <use class="burger-icon" href="./images/navigation-menu-icon.svg#icon-navigation-menu">
+                        </use>
+                        <use class="cross-icon" href="./images/icons.svg#icon-close">
+                        </use>
+                        </svg>
+                </button>
+                <div class="menu-container is-open" id="menu-container" data-menu>
+                        <ul class="burger-nav">
+                            <li class="burger-item">
+                                <a href="./index.html" class="link burger-link">Студія</a>
+                            </li>
+                            <li class="burger-item">
+                                <a href="./portfolio.html" class="link burger-link burger-current">Портфоліо</a>
+                            </li>
+                            <li class="burger-item">
+                                <a href="#" class="link burger-link">Контакти</a>
+                            </li>
+                        </ul>
+                    <ul class="burger-contacts">
+                        <li class="burger-item">
+                            <a href="tel:+380961111111" class="link burger-tel">+38 096 111 11 11</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="mailto:info@devstudio.com" class="link burger-email">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="burger-socials">
+                        <li>
+                            <a href="#" class="link burger-social">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link burger-social">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link burger-social">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link burger-social">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
                 <nav class="site-nav">
-                        <a href="./index.html" class=" link logo-header"><span lang="en"><span class="logo-accent">Web</span>Studio</span></a>
-                        <ul class="header-list">
-                            <li class="header-item">
-                                <a href="./index.html" class="link link-item">Студія</a>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="./index.html" class="link link-item link-current">Студія</a>
                             </li>
-                            <li class="header-item">
-                                <a href="./portfolio.html" class="link link-item link-current">Портфоліо</a>
+                            <li class="nav-item">
+                                <a href="./portfolio.html" class="link link-item">Портфоліо</a>
                             </li>
-                            <li class="header-item">
+                            <li class="nav-item">
                                 <a href="#" class="link link-item">Контакти</a>
                             </li>
                         </ul>
                 </nav>
-                <ul class="header-list">
+                <ul class="contacts-list">
                     <li class="header-email">
                         <a href="mailto:info@devstudio.com" class="link header-contact">
                             <svg class="link-icon" width="16px" height="12px">
@@ -38,7 +85,7 @@
                             </svg> info@devstudio.com</a>
                     </li>
                     <li>
-                        <a href="tel:+380961111111" class="link header-contact">
+                        <a href="tel:+380961111111" class="link header-contact header-tel">
                             <svg class="link-icon" width="10px" height="16px">
                                 <use href="./images/icons.svg#icon-smartphone">
                                 </use>
@@ -257,7 +304,7 @@
                     </ul>
                 </address>
             </div>
-                <div>
+                <div class="socials-footer">
                     <p class="social-title">Приєднуйтесь</p>
                     <ul class="socials-list">
                         <li>
@@ -314,5 +361,7 @@
                 
         </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>

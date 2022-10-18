@@ -1,17 +1,37 @@
-.header-list {
-    @extend %header-list;
+.contacts-list {
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        margin-left: auto;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.14;
+        display: flex;
+    }
 }
 
 .header-email {
-    margin-right: 50px;
+    @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+    }
 }
 
 .header-contact {
     color: $primary-text-color;
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 21px;
+    margin-bottom: 10px;
 
     transition: color $time-period $timing-function;
 
@@ -19,9 +39,27 @@
     &:focus {
         color: $accent-color;
     }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 0;
+    }
+}
+
+.header-tel {
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+        padding-top: 0;
+        padding-bottom: 21px;
+        margin-bottom: 0;
+    }
 }
 
 .link-icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+    }
 }

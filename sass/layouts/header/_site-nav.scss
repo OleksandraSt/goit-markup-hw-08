@@ -1,13 +1,25 @@
 .site-nav {
+    @media screen and (max-width: ($tablet - 1px)) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+.nav-list {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     display: flex;
-    align-items: center;
 }
 
-.header-list {
-    @extend %header-list;
-}
-
-.header-item {
+.nav-item {
     margin-right: 50px;
 
     &:last-child {
