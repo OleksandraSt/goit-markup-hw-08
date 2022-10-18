@@ -408,6 +408,10 @@ button {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+.menu-social {
+  color: #2196F3;
+}
+
 @media screen and (max-width: 767px) {
   .site-nav {
     display: none;
