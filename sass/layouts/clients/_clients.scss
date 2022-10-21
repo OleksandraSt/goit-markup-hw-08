@@ -4,6 +4,10 @@
     margin-left: -30px;
     margin-top: -30px;
 
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+        margin-top: 0;
+    }
 }
 
 .clients-list__item {
@@ -12,15 +16,16 @@
     margin-top: 30px;
 
     @media screen and (min-width: $mobile) {
-        flex-basis: calc(480px / 2 - 30px);
+        flex-basis: calc($mobile / 2 - 30px);
        }
 
     @media screen and (min-width: $tablet) {
-        flex-basis: calc(768px / 3 - 30px);
+        flex-basis: calc($tablet / 3 - 30px);
     }
 
     @media screen and (min-width: $desktop) {
-        flex-basis: calc(1200px / 6 - 30px);
+        flex-basis: calc($desktop / 6 - 30px);
+        margin-top: 0;
     }
 }
 

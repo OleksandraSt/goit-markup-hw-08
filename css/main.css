@@ -295,13 +295,25 @@ button {
 }
 
 .menu-button {
-  position: absolute;
-  right: 23px;
-  z-index: 100;
-  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
   padding: 0;
+  margin-left: auto;
+  margin-right: 0;
   border: none;
+  color: #000000;
   background-color: transparent;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-button:hover, .menu-button:focus {
   color: #2196F3;
@@ -312,38 +324,38 @@ button {
   }
 }
 
-.menu-button .cross-icon {
-  display: none;
-}
-.menu-button.is-open .cross-icon {
-  display: block;
+.burger-icon,
+.cross-icon {
   fill: currentColor;
-}
-
-.menu-button .burger-icon {
-  fill: currentColor;
-}
-.menu-button.is-open .burger-icon {
-  display: none;
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  z-index: 99;
+  position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   padding-left: 40px;
   padding-top: 48px;
   padding-right: 40px;
   padding-bottom: 48px;
   background-color: #FFFFFF;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 767px) {
-  .menu-container.is-open {
-    display: block;
-  }
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu-container .menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .burger-nav {
@@ -628,6 +640,13 @@ button {
     margin-top: -30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .features-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 0;
+  }
+}
 
 .features-list__item:not(:last-child) {
   margin-bottom: 30px;
@@ -735,6 +754,13 @@ button {
     margin-top: -30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 0;
+  }
+}
 
 .team-card {
   background-color: #FFFFFF;
@@ -759,6 +785,7 @@ button {
   .team-card {
     -ms-flex-preferred-size: 270px;
         flex-basis: 270px;
+    margin-top: 0;
   }
 }
 
@@ -813,6 +840,13 @@ button {
   margin-left: -30px;
   margin-top: -30px;
 }
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 0;
+  }
+}
 
 .clients-list__item {
   -ms-flex-preferred-size: calc(50% - 30px);
@@ -836,6 +870,7 @@ button {
   .clients-list__item {
     -ms-flex-preferred-size: 170px;
         flex-basis: 170px;
+    margin-top: 0;
   }
 }
 

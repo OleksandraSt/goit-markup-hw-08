@@ -1,12 +1,17 @@
 .menu-button {
-position: absolute;
-right: 23px;
-z-index: 100;
-color: $modal-text-and-close-icon-color;
-
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 40px;
+min-height: 40px;
 padding: 0;
+margin-left: auto;
+margin-right: 0;
 border: none;
+color: $modal-text-and-close-icon-color;
 background-color: transparent;
+
+transition: color $time-period $timing-function;
 
 &:hover,
 &:focus {
@@ -18,34 +23,18 @@ background-color: transparent;
 }
 }
 
+.burger-icon,
 .cross-icon {
-    .menu-button & {
-        display: none;
-    }
-
-    .menu-button.is-open & {
-        display: block;
-        fill: currentColor;
-    }
-}
-
-.burger-icon {
-    .menu-button & {
-        fill: currentColor;
-    }
-    
-    .menu-button.is-open & {
-        display: none;
-    }
+    fill: currentColor;
 }
 
 .menu-container {
-    display: none;
-    position: absolute;
-    z-index: 99;
+    position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding-left: 40px;
     padding-top: 48px;
     padding-right: 40px;
@@ -53,10 +42,17 @@ background-color: transparent;
 
     background-color: $primary-background-color;
 
+    transform: translateX(100%);
+    transition: transform $time-period $timing-function;
+
     &.is-open {
-        @media screen and (max-width: ($tablet - 1px)) {
-            display: block;
-        }
+        transform: translateX(0);
+    }
+
+    & .menu-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
     }
 }
 

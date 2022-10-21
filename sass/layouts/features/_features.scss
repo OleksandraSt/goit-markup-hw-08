@@ -9,6 +9,11 @@
         margin-left: -30px;
         margin-top: -30px;
     }
+
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+        margin-top: 0;
+    }
 }
 
 .features-list__item {
@@ -17,7 +22,7 @@
     }
 
 @media screen and (min-width: $tablet) {
-    flex-basis: calc(768px / 2 - 30px);
+    flex-basis: calc($tablet / 2 - 30px);
     margin-left: 30px;
     margin-top: 30px;
 
@@ -27,7 +32,7 @@
 }
 
 @media screen and (min-width: $desktop) {
-    flex-basis: calc(1200px / 4 - 30px);
+    flex-basis: calc($desktop / 4 - 30px);
 }
 }
 

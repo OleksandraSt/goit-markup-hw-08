@@ -17,18 +17,22 @@
         <div class="container header-container">
                 <a href="./index.html" class="link logo-header"><span lang="en"><span class="logo-accent">Web</span>Studio</span></a>
                 <button type="button"
-                class="menu-button"
+                class="menu-button js-open-menu"
                 aria-expanded="false"
-                aria-controls="menu-container"
-                data-menu-button>
+                aria-controls="menu-container">
                     <svg width="24px" height="16px" aria-label="Перемикач мобільного меню">
                         <use class="burger-icon" href="./images/navigation-menu-icon.svg#icon-navigation-menu">
                         </use>
+                        </svg>
+                </button>
+                <div class="menu-container js-menu-container" id="menu-container">
+                    <button type="button"
+                class="menu-button js-close-menu">
+                    <svg width="24px" height="16px" aria-label="Перемикач мобільного меню">
                         <use class="cross-icon" href="./images/icons.svg#icon-close">
                         </use>
                         </svg>
                 </button>
-                <div class="menu-container" id="menu-container" data-menu>
                         <ul class="burger-nav">
                             <li class="burger-item">
                                 <a href="./index.html" class="link burger-link burger-current">Студія</a>
@@ -181,19 +185,31 @@
                 </h2>
                 <ul class="job-list">
                     <li class="job-image">
-                            <img src="./images/box1.jpg" alt="Людина працює на комп'ютері" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/box1.jpg 270w, ./images/box1-2x.jpg 540w">
+                            <img src="./images/box1.jpg" alt="Людина працює на комп'ютері">
+                        </picture>
+                            <!-- <img src="./images/box1.jpg" alt="Людина працює на комп'ютері" width="370" height="294"> -->
                         <div class="job-descr">
                             <p>Десктопні додатки</p>
                         </div>
                     </li>
                     <li class="job-image">
-                        <img src="./images/box2.jpg" alt="Людина працює на комп'ютері і на мобільному телефоні" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/box2.jpg 270w, ./images/box2-2x.jpg 540w">
+                            <img src="./images/box1.jpg" alt="Людина працює на комп'ютері і на мобільному телефоні">
+                        </picture>
+                        <!-- <img src="./images/box2.jpg" alt="Людина працює на комп'ютері і на мобільному телефоні" width="370" height="294"> -->
                         <div class="job-descr">
                             <p>Мобільні додатки</p>
                         </div> 
                     </li>
                     <li class="job-image">
-                        <img src="./images/box3.jpg" alt="Людина працює на планшеті" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/box3.jpg 270w, ./images/box3-2x.jpg 540w">
+                            <img src="./images/box1.jpg" alt="Людина працює на планшеті">
+                        </picture>
+                        <!-- <img src="./images/box3.jpg" alt="Людина працює на планшеті" width="370" height="294"> -->
                         <div class="job-descr">
                             <p>Дизайнерські рішення</p>
                         </div>
@@ -641,7 +657,13 @@
         </div>
     </div>
 
-    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
