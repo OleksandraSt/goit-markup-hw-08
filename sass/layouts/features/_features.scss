@@ -33,6 +33,7 @@
 
 @media screen and (min-width: $desktop) {
     flex-basis: calc($desktop / 4 - 30px);
+    margin-top: 0;
 }
 }
 
