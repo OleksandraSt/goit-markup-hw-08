@@ -61,12 +61,21 @@ transition: color $time-period $timing-function;
     font-size: 40px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-    margin-bottom: 302px;
+    margin-bottom: 37.9vh;
+
+    @media screen and (max-width: 370px) {
+        font-size: 8.2vw;
+        line-height: 5.9vh;
+    }
 
 }
 
 .burger-item:not(:last-child) {
     margin-bottom: 32px;
+
+    @media screen and (max-width: 370px) {
+        margin-bottom: 4vh;
+    }
 }
 
 .burger-link {
@@ -88,18 +97,32 @@ transition: color $time-period $timing-function;
     font-weight: 500;
     letter-spacing: 0.02em;
     margin-bottom: 64px;
+
+    @media screen and (max-width: 370px) {
+        margin-bottom: 8vh;
+    }
 }
 
 .burger-tel {
     font-size: 34px;
     line-height: 1.18;
     color: $accent-color;
+
+    @media screen and (max-width: 370px) {
+        font-size: 7.1vw;
+        line-height: 5.9vh;
+    }
 }
 
 .burger-email {
     font-size: 24px;
     line-height: 1.17;
     color: $primary-text-color;
+
+    @media screen and (max-width: 370px) {
+        font-size: 5vw;
+        line-height: 3.5vh;
+    }
 }
 
 .burger-socials {
@@ -108,6 +131,11 @@ transition: color $time-period $timing-function;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: 450px) {
+        font-size: 3.75vw;
+        line-height: 2.8vh;
+    }
 }
 
 .burger-social {
@@ -117,6 +145,13 @@ transition: color $time-period $timing-function;
         padding-right: 10px;
         margin-right: 10px;
         border-right: 1px solid $form-input-border-color;
+    }
+}
+
+.burger-social:not(:last-child) {
+    @media screen and (max-width: 450px) {
+        padding-right: 2.1vw;
+        margin-right: 2.1vw;
     }
 }
 
